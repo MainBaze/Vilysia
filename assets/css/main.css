@@ -2948,7 +2948,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				padding-bottom: 0;
+				padding-bottom: 1;
 			}
 
 				#footer header.style1 {
