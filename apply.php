@@ -1,8 +1,70 @@
+<?php
+if(isset($_POST['submit'])){
+ $name=$_POST['name'];
+  $email=$_POST['email'];
+
+  //send mail 
+ $to='markusriisebbesen@gmail.com';
+ $subject='Vilysia Staff Application';
+ $body='<html>
+ <body>
+ <h3>Application for mc.vilysia.com</h3>
+ <hr>
+
+ <p> Name : '.$name.'</p>
+ <br>
+
+ <p> Email : '.$email.'</p>
+
+ </body>
+
+ </html>';
+
+ $headers  ="From:".$name."<".$email.">\r\n";
+ $headers .="reply-To:".$email."\r\n";
+ $headers .="NINE-Version: 1.0\r\n";
+ $headers .="Content-type: text/html; charset=utf-8";
+
+
+//confirmation mail
+ $user=$email;
+ $usersubject = "Vilysia Application";
+ $userheaders = "From: Markusriisebbesen.com\n";
+ $usermessage = "Thank you for the interest. You'll receive a reply soon";
+
+
+//sending process
+ $send=mail($to, $subject, $body, $headers);
+ $confirm=mail($user, $usersubject, $userheaders,$usermessage );
+
+ if($send && $confirm){
+  echo "success";
+ }
+
+ else{
+  echo "Failed";
+ }
+
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Contact Form</title>
+</head>
+<body>
+<form action="" method="POST">
+
+<input type="text" name="name" placeholder="Name">
+<input type="email" name="email" placeholder="email">
+<input type="submit" name="submit" value="send">
+</form>
+
+</body>
+</html>
+
 <!DOCTYPE HTML>
-<!--
-	Escape Velocity by HTML5 UP
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 
 <meta name=”viewport” content=”width=device-width, initial-scale=1″>
 <link rel="icon" href="https://imgur.com/0f3ry71.png" type="image/x-icon"/>
@@ -61,12 +123,39 @@
 							Welcome, player!<br class="mobile-hide" />
 <!--							site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>-->
 						</p>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+								<!-- Contact Form -->
+									<section>
+										<form method="post" action="mailto:markusriisebbesen@gmail.com">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="reset" class="style2" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</div>
 <!--						<p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
 						free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
 						your personal or commercial projects &ndash; just be sure to credit us!</p>-->
-						<p class="style3">Our website is still being constructed, stay tuned!</p>
 					</div>
 				</section>
+
 <!-- ####################################################################
 			<!-- Main ----Erstat med pil----
 				<section id="main" class="wrapper style2">
