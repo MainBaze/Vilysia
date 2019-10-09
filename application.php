@@ -9,7 +9,7 @@ $mailTo = "contact@mre.design";
 $headers = "From: ".$mailFrom;
 $txt = "Application from ".$name.".\n\n".$message;
 
-mail($mailTo, $subject, $txt, $headers);
+mail($mailTo, $txt, $headers);
 header("Location: apply.html?mailsend");
 }
 ?>
