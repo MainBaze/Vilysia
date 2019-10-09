@@ -7,11 +7,20 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-
+.formwidth{
+	   -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       width: 450%;
+}
+@media screen and (max-width: 620px){
+	.formwidth{
+		width: 600%;
+	}
+}
 primarycolor {
      color: #31BDDD;
 }
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -88,7 +97,7 @@ input, select, textarea {
 	}
 
 	*, *:before, *:after {
-	/*	box-sizing: inherit;*/
+		box-sizing: inherit;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1534,10 +1543,9 @@ input, select, textarea {
 		background: #eee;
 		box-shadow: inset 0px 0px 1px 0px #a0a1a7;
 		border-radius: 0.35em;
-		width: 100%;
-		padding: 0.75em 1em 0.75em 1em;
-	}
 
+		padding: 0.75em 0em 0.75em 1em;
+	}
 		form input[type="text"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
