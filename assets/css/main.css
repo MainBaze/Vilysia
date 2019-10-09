@@ -2243,7 +2243,7 @@ input, select, textarea {
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 			font-size: 2.75em;
 			letter-spacing: 0.075em;
-			line-height: 1.35em;
+			line-height: 0.5em;
 			padding: 1em 0 1em 0;
 			margin-bottom: 1em;
 		}
