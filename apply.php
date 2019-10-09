@@ -4,7 +4,7 @@ $visitor_email = $_POST['email'];
 $message = $_POST['message'];
 
 
-$email_from = 'Vilysia';
+$email_from = 'mc.vilysia@gmail.com';
 
 $email_subject = "Staff Application";
 
@@ -21,7 +21,7 @@ $headers .= "Reply To: $visitor_email \r\n";
 
 mail($to,email_subject,$email_body,$headers);
 
-header("Location: Website Name");
+header("Location: index.html");
 
 
 
