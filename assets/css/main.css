@@ -1566,7 +1566,7 @@ input, select, textarea {
 	}
 
 	form textarea {
-		min-height: 8em;
+		min-height: 4em;
 	}
 
 	form ul.actions {
