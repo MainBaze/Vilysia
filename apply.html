@@ -1,68 +1,35 @@
-<?php
-if(isset($_POST['submit'])){
- $name=$_POST['name'];
-  $email=$_POST['email'];
+<?php>
+if (isset($_POST['name']) && isset($_POST['email'])) {
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $to = 'markusriisebbesen@gmail';
+ $subject = "Staff Application";
+ $body = '<html>
+    <body>
+     <h2>Vilysia staff application</h2>
+     <br>
+     <p>Name:<br>'.$name.'</p>
+     <p>Email:<br>'.$email.'</p>
 
-  //send mail 
- $to='markusriisebbesen@gmail.com';
- $subject='Vilysia Staff Application';
- $body='<html>
- <body>
- <h3>Application for mc.vilysia.com</h3>
- <hr>
+    </body>
+   </html>';
 
- <p> Name : '.$name.'</p>
- <br>
+//headers
+$headers  = "From: ".$name." <".$email.">\r\n";
+$headers .= "Reply-To: ".$email."\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset-utf-8";
 
- <p> Email : '.$email.'</p>
-
- </body>
-
- </html>';
-
- $headers  ="From:".$name."<".$email.">\r\n";
- $headers .="reply-To:".$email."\r\n";
- $headers .="NINE-Version: 1.0\r\n";
- $headers .="Content-type: text/html; charset=utf-8";
-
-
-//confirmation mail
- $user=$email;
- $usersubject = "Vilysia Application";
- $userheaders = "From: Markusriisebbesen.com\n";
- $usermessage = "Thank you for the interest. You'll receive a reply soon";
-
-
-//sending process
- $send=mail($to, $subject, $body, $headers);
- $confirm=mail($user, $usersubject, $userheaders,$usermessage );
-
- if($send && $confirm){
-  echo "success";
- }
-
- else{
-  echo "Failed";
- }
-
+//send
+$send = mail($to, $subject, $body, $headers);
+if ($send) {
+ echo '<br>';
+ echo "Thanks for your submission, we'll return to you";
+} else {
+ echo 'Error.';
+}
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
- <title>Contact Form</title>
-</head>
-<body>
-<form action="" method="POST">
-
-<input type="text" name="name" placeholder="Name">
-<input type="email" name="email" placeholder="email">
-<input type="submit" name="submit" value="send">
-</form>
-
-</body>
-</html>
 
 <!DOCTYPE HTML>
 
