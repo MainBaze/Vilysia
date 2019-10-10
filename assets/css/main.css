@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
 
 /*
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
+	Escape Velocity by HTML5 UP html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
@@ -11,11 +10,27 @@
 	   -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
        box-sizing: border-box;
-       width: 450%;
+       width: 150%;
 }
 @media screen and (max-width: 620px){
 	.formwidth{
-		width: 600%;
+		width: 380%;
+		margin-left: -115%;
+	}
+}
+.questionwidth{
+	   -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       width: 150%;
+       font-size:125%;
+}
+@media screen and (max-width: 620px){
+	.questionwidth{
+		width: 200px;
+		max-width: 600%;
+		font-size:100%;
+		margin-left: -110%;
 	}
 }
 primarycolor {
@@ -115,7 +130,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
-		color: #919499;
+		color: #000;
 		font-size: 14pt;
 		line-height: 1.75em;
 		letter-spacing: 0.025em;
@@ -163,6 +178,8 @@ input, select, textarea {
 		border: 0;
 		border-top: solid 1px #ddd;
 		margin: 2em 0 2em 0;
+        display: block;
+        color:red;
 	}
 
 	sub {
@@ -2026,12 +2043,12 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background: #fff;
+			background: #282b34;
 		}
 
 			.wrapper.style2 .title {
-				background: #fff;
-				color: #484d55;
+				background: #282b34;
+				color: #FFF;
 			}
 
 		.wrapper.style3 {
@@ -2243,6 +2260,16 @@ input, select, textarea {
 			padding: 1em 0 1em 0;
 			margin-bottom: 1em;
 		}
+			font-weight: 700;
+			color: #fff;
+			border-radius: 0.35em;
+			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+			font-size: 2.75em;
+			letter-spacing: 0.075em;
+			line-height: 0.5em;
+			padding: 1em 0 1em 0;
+			margin-bottom: 1em;
+		}
 
 			#intro p.style2 a {
 				color: inherit;
@@ -2443,12 +2470,6 @@ input, select, textarea {
 				font-size: 11pt;
 				line-height: 1.5em;
 				letter-spacing: 0.015em;
-			}
-
-		/* Wrapper */
-
-			.wrapper {
-				padding: 4em 0 7em 0;
 			}
 
 		/* Logo */
@@ -2902,8 +2923,20 @@ input, select, textarea {
 					font-size: 1.5em;
 					letter-spacing: 0.05em;
 					line-height: 1.25em;
-					padding: 1.25em;
+					padding: 1em;
 				}
+@media only screen and (max-width: 600px) {
+	#intro p.style2 {
+        font-size: 30px;
+		
+	}
+}
+#span .intro {
+	font-size:25px;
+	font-weight:normal;
+	letter-spacing:0.03em;
+	color:#C7C7C7;
+}
 
 		/* Features */
 
