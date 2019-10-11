@@ -26,7 +26,7 @@
   transition: all 1s ease;
 }
 .imagewidget {
-  width: 150%;
+  width: 100%;
   height: 150px;
   overflow:visible;
 }
@@ -49,7 +49,7 @@
 .iconwidget {
   position: absolute;
   background:#fff;
-  right: 38%;
+  right: 37%;
   top: 28%;
   width: 100px;
   height: 100px;
@@ -62,29 +62,43 @@
 @media screen and (max-width: 780px) {
 
     .iconwidget {
-    right: 30%;
-    top: 18%;
+    text-align: center;
     }
 }
 #rest{
-  padding:auto 15px;
+  padding:auto;
   font-size: 20px;
   line-height:30px;
-  color:#FFF
+  color:#FFF;
+  text-align:center;
+  margin-top: 25px;
 }
+@media screen and (max-width: 780px) {
 
+    #rest {
+      padding:auto;
+      font-size: 20px;
+      line-height:30px;
+      color:#FFF;
+      text-align:center;
+      margin-top: 0px;
+    }
+}
 .frontpagewidgetdiv{
-    padding-bottom: 200px;
+    margin-top: -50px;
+    padding-bottom: 100px;
 	text-align:center;
 }
 @media screen and (max-width: 780px) {
 
     .frontpagewidgetdiv {
-    padding-bottom: 100px;
+    margin-top: 0x;
+    padding-bottom: 50px;
 	text-align:center;
     }
 }
 .frontpagewidgetstatus{
+    margin-top: 100px;
     width:380px;
 	height:370px;
 }
@@ -98,6 +112,7 @@
 .frontpagewidgetdiscord{
     width:380px;
 	height:370px;
+	padding-top: 100px;
 }
 @media only screen and (max-width: 780px) {
 
