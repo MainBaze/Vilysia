@@ -62,7 +62,8 @@
 @media screen and (max-width: 780px) {
 
     .iconwidget {
-    text-align: center;
+      right: 30%;
+      top: 20%;
     }
 }
 #rest{
